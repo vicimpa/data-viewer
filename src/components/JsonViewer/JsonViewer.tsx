@@ -8,7 +8,7 @@ type TJsonViewerProps = {
   show?: boolean;
 };
 
-export const JsonViewer: FC<TJsonViewerProps> = ({ data, show }) => {
+export const JsonViewer: FC<TJsonViewerProps> = ({ data, show = true }) => {
 
   return (
     <div class={s.viewer}>
