@@ -1,4 +1,4 @@
-import { JsonViewer } from "components/JsonViewer/JsonViewer";
+import { JsonViewer } from "components/JsonViewer";
 
 export const App = () => {
   console.log(typeof true);
