@@ -63,6 +63,7 @@ export const Item: FC<TItemProps> = ({ data, children }) => {
         <Text variant="syntax">"</Text>
         <Text variant="date">{data.toISOString()}</Text>
         <Text variant="syntax">"</Text>
+        {children}
         <Text variant="comment">date</Text>
       </>
     );
