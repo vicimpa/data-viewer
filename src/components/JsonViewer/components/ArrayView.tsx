@@ -9,12 +9,13 @@ import { Text } from "./Text";
 
 type TArrayViewProps = {
   data: any[];
+  show?: boolean;
   children?: ReactNode;
 };
 
-export const ArrayView: FC<TArrayViewProps> = ({ data, children }) => {
+export const ArrayView: FC<TArrayViewProps> = ({ data, children, show: initialShow }) => {
   const tab = useTabContext();
-  const show = useSignal(true);
+  const show = useSignal(!!initialShow);
 
   const Top = (
     <>

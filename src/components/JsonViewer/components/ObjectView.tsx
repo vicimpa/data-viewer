@@ -9,12 +9,13 @@ import { Text } from "./Text";
 
 type TObjectViewProps = {
   data: object;
+  show?: boolean;
   children?: ReactNode;
 };
 
-export const ObjectView: FC<TObjectViewProps> = ({ data, children }) => {
+export const ObjectView: FC<TObjectViewProps> = ({ data, children, show: initialShow }) => {
   const tab = useTabContext();
-  const show = useSignal(true);
+  const show = useSignal(!!initialShow);
   const array = Object.entries(data);
 
   const Top = (

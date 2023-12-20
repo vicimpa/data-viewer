@@ -1,17 +1,17 @@
 import { FC } from "preact/compat";
 
-import { Item } from "./components/Item";
+import { ObjectView } from "./components/ObjectView";
 import s from "./JsonViewer.module.sass";
 
 type TJsonViewerProps = {
-  data?: any;
+  data: object;
 };
 
 export const JsonViewer: FC<TJsonViewerProps> = ({ data }) => {
 
   return (
     <div class={s.viewer}>
-      <Item data={data} />
+      <ObjectView data={data} show />
     </div>
   );
 };
