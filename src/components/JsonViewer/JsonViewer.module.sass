@@ -1,0 +1,50 @@
+.viewer
+  width: 500px
+  padding: 10px
+  border: 1px solid #999
+
+  counter-increment: rows
+  counter-set: rows 0
+
+  background-color: #333
+  border-radius: 10px
+
+  .row
+    position: relative
+
+  .row::before
+    width: 30px
+    display: inline-block
+    content: counter(rows)
+    counter-increment: rows
+    color: #999
+
+  .text
+    font-family: monospace
+
+    &[data-noselect]
+      user-select: none
+
+    &.clicked
+      cursor: pointer
+
+    &.comment
+      text-decoration: underline
+      padding-left: 10px
+      padding-right: 10px
+      color: #999
+
+    &.syntax, &.regexp, &.index
+      color: #89ddff
+
+    &.string
+      color: #c3e88d
+
+    &.identifier
+      color: #ffcb6b
+
+    &.date, &.regexp-flags
+      color: #c792ea
+
+    &.number, &.boolean, &.null
+      color: #f78c6c
