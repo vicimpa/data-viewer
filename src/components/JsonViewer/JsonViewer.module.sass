@@ -8,6 +8,7 @@
 
   background-color: #333
   border-radius: 10px
+  overflow-y: scroll
 
   .row
     position: relative
@@ -25,13 +26,15 @@
     &[data-noselect]
       user-select: none
 
+    &[data-padding]
+      padding-left: 10px
+      padding-right: 10px
+
     &.clicked
+      text-decoration: underline
       cursor: pointer
 
     &.comment
-      text-decoration: underline
-      padding-left: 10px
-      padding-right: 10px
       color: #999
 
     &.syntax, &.regexp, &.index

@@ -24,11 +24,11 @@ export const ObjectView: FC<TObjectViewProps> = ({ data, children, show: initial
 
       {
         array.length ? (
-          <Text variant="comment" noselect onClick={() => { show.value = !show.value; }}>
+          <Text variant="comment" padding noselect onClick={() => { show.value = !show.value; }}>
             {!show.value ? '˯ ' : '˰ '}
             {show.value ? 'object' : array.length + ' items'}
           </Text>
-        ) : <Text variant="comment" noselect>empty</Text>
+        ) : <Text variant="comment" padding noselect>empty</Text>
       }
 
       {(!show.value || !array.length) ? (

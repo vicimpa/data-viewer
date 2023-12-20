@@ -23,11 +23,11 @@ export const ArrayView: FC<TArrayViewProps> = ({ data, children, show: initialSh
 
       {
         data.length ? (
-          <Text variant="comment" noselect onClick={() => { show.value = !show.value; }}>
+          <Text variant="comment" noselect padding onClick={() => { show.value = !show.value; }}>
             {!show.value ? '˯ ' : '˰ '}
             {show.value ? 'array' : data.length + ' items'}
           </Text>
-        ) : <Text variant="comment" noselect>empty</Text>
+        ) : <Text variant="comment" padding noselect>empty</Text>
       }
 
       {(!show.value || !data.length) ? (

@@ -12,6 +12,7 @@ export const App = () => {
         testNull: null,
         testDate: new Date(),
         testRegExp: /123/gi,
+        testFunction: () => { },
         testObject: {
           hello: 'world',
           emptyObject: {},

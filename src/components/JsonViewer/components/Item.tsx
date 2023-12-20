@@ -29,6 +29,14 @@ export const Item: FC<TItemProps> = ({ data, children }) => {
       </>
     );
 
+  if (typeof data === 'function')
+    return (
+      <>
+        <Text variant="comment">function</Text>
+        {children}
+      </>
+    );
+
   if (typeof data === 'number' || typeof data === 'bigint')
     return (
       <>
