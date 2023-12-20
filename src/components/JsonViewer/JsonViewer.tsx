@@ -5,13 +5,14 @@ import s from "./JsonViewer.module.sass";
 
 type TJsonViewerProps = {
   data: object;
+  show?: boolean;
 };
 
-export const JsonViewer: FC<TJsonViewerProps> = ({ data }) => {
+export const JsonViewer: FC<TJsonViewerProps> = ({ data, show }) => {
 
   return (
     <div class={s.viewer}>
-      <ObjectView data={data} show />
+      <ObjectView data={data} show={show} />
     </div>
   );
 };
