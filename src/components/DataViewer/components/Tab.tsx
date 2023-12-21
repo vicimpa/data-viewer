@@ -5,7 +5,9 @@ import { useContext } from "preact/hooks";
 export const TabContext = createContext(0);
 export const useTabContext = () => useContext(TabContext);
 
-type TTabProps = {
+const { Provider: TabContextProvider } = TabContext;
+
+export type TTabProps = {
   children?: ReactNode;
 };
 
@@ -13,8 +15,8 @@ export const Tab: FC<TTabProps> = ({ children }) => {
   const tab = useTabContext();
 
   return (
-    <TabContext.Provider value={tab + 1}>
+    <TabContextProvider value={tab + 1}>
       {children}
-    </TabContext.Provider>
+    </TabContextProvider>
   );
 };

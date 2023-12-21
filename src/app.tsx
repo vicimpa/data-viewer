@@ -1,33 +1,25 @@
-import { JsonViewer } from "components/JsonViewer";
+import { DataViewer } from "components/DataViewer";
 
 export const App = () => {
-  console.log(typeof true);
 
   return (
     <>
-      <JsonViewer data={{
-        testString: "Hello world!",
-        testNumber: 123,
+      <DataViewer data={{
+        testString: 'My string',
+        testNumber: 123.123,
+        testBigint: 123n,
         testBoolean: true,
         testNull: null,
-        testDate: new Date(),
-        testRegExp: /123/gi,
-        testFunction: () => { },
+        testUndefined: undefined,
         testObject: {
-          hello: 'world',
-          emptyObject: {},
-          fullArray: [
-            1, 2, 3, 4, 5, 6
-          ]
+          a: 1,
+          b: 2,
         },
         testArray: [
-          'Roman',
-          'Igor',
-          'Masha',
-          {
-            test: 123
-          }
-        ]
+          1, 2, 3, 4, 5
+        ],
+        emptyObject: {},
+        emotyArray: []
       }} />
     </>
   );

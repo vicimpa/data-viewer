@@ -1,0 +1,65 @@
+.viewer
+  min-width: 500px
+  border: 1px solid #999
+  border-radius: 10px
+  counter-set: rows 0
+  background-color: #333
+  display: flex
+  flex-direction: column
+
+  .row
+    counter-increment: rows
+    padding: 2.5px 15px
+    white-space: pre
+    font-size: 16px
+    font-family: monospace
+
+    &:nth-child(odd)
+      background-color: rgba(0,0,0,0.1)
+
+    &::before
+      color: #777
+      display: inline-block
+      width: 30px
+      content: counter(rows)
+
+  .typo
+    display: contents
+
+    &[data-noselect]
+      user-select: none
+
+    &[data-variant=string]
+      color: #ffcb6b
+
+    &[data-variant=number]
+      color: #f78c6c
+
+    &[data-variant=boolean]
+      color: #f78c6c
+
+    &[data-variant=null]
+      color: #f78c6c
+
+    &[data-variant=undefined]
+      color: #f78c6c
+
+    &[data-variant=identifier]
+      color: #c792ea
+
+    &[data-variant=bigint]
+      color: #c792ea
+
+    &[data-variant=syntax]
+      color: rgb(51, 204, 255)
+
+    &[data-variant=comment]
+      color: #666
+      font-size: 14px
+
+    &[data-clicked]
+      cursor: pointer
+      text-decoration: underline
+
+    &[data-padding]
+      padding: 0px 10px
