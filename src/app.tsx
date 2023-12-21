@@ -21,6 +21,7 @@ export const App = () => {
         emptyObject: {},
         emotyArray: []
       }} />
+      <a href="https://github.com/vicimpa/data-viewer">GitHub Repository</a>
     </>
   );
 };
