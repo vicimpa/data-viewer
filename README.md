@@ -1,5 +1,7 @@
 # Простой просмоторщик данных
 
+Реализация просмотра данных в React. Реализацию можно посмотреть на [стриме](https://www.youtube.com/watch?v=p-4uUrnRiek)
+
 ## Скрины
 >
 > ![Screen 1](screens/screen1.png)
@@ -9,9 +11,9 @@
 
 ## Пример использования
 ```tsx
-import {JsonViewer} from "components/JsonViewer";
+import { DataViewer } from "components/DataViewer";
 
-<JsonViewer data={objectForView} />
+<DataViewer data={objectForView} />
 
 ```
 
