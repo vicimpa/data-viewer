@@ -1,6 +1,6 @@
 # Простой просмоторщик данных
 
-Реализация просмотра данных в React. Реализацию можно посмотреть на [стриме](https://www.youtube.com/watch?v=p-4uUrnRiek)
+Реализация просмотра данных в React. Реализацию можно посмотреть на [стриме](https://www.youtube.com/watch?v=p-4uUrnRiek). Демо, где можно потыкать, разместил [тут](https://vicimpa.github.io/data-viewer/)
 
 ## Скрины
 >
